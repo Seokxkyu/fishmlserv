@@ -14,7 +14,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 @app.get("/fish")
-def fish(length, weight):
+def fish(length: float, weight: float):
     """
     물고기 종류 판별기
     
@@ -25,5 +25,14 @@ def fish(length, weight):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-    return {"length": length, "weight": weight}
+    if length > 30.0:
+        prediction = "도미"
+    else:
+        prediction = "빙어"
+    
+    return {
+                "prediction": prediction,
+                "length": length, 
+                "weight": weight
+            }
 
