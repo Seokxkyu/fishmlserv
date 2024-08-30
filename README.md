@@ -9,7 +9,7 @@
 - http://localhost:8000/docs
 ```bash
 # uvicorn --help
-$ uvicorn src.finshmlserv.main:app --reload
+$ uvicorn src.fishmlserv.main:app --reload
 ```
 
 - prd
