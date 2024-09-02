@@ -2,9 +2,9 @@
 def get_model_path():
     import os
     
-    dir_name = os.path.dirname(__file__)
+    this_path = os.path.abspath(__file__)
+    dir_name = os.path.dirname(this_path)
     model_name = f'{dir_name}/model.pkl'
-    
 
     return model_name
 
