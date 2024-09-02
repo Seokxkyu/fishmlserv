@@ -4,7 +4,8 @@ def get_model_path():
     
     this_path = os.path.abspath(__file__)
     dir_name = os.path.dirname(this_path)
-    model_name = f'{dir_name}/model.pkl'
+    # model_name = f'{dir_name}/model.pkl'
+    model_name = dir_name + "/model.pkl"
 
     return model_name
 
