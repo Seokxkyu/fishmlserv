@@ -3,14 +3,14 @@ from sklearn.neighbors import KNeighborsClassifier
 from fishmlserv.model.manager import get_model_path
 import pickle
 
-def prediction(length: float, weight: float):
+def prediction(l: float, w: float):
     
     model_path=get_model_path()
     
     with open(model_path, 'rb') as f:
         fish_model=pickle.load(f)
     
-    data=[[length, weight]]
+    data=[[l, w]]
     
     prediction=fish_model.predict(data)
     
@@ -22,3 +22,4 @@ def prediction(length: float, weight: float):
 
 def main():
     fire.Fire(prediction)
+
