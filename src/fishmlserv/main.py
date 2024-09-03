@@ -48,13 +48,3 @@ def fish(length: float, weight: float):
                 "weight": weight
             }
 
-
-def predict_fish(length: float, weight: float):
-    """
-    CLI 용 물고기 종류 판별기
-    """
-    result = fish(length, weight)
-    return result["prediction"]
-
-if __name__ == "__main__":
-    fire.Fire(predict_fish)
