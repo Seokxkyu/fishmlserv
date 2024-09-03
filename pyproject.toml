@@ -22,3 +22,6 @@ distribution = false
 note = [
     "notebook>=7.2.2",
 ]
+
+[project.scripts]
+get-model-path = "fishmlserv.model.manager:get_model_path"
