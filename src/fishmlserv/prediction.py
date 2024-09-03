@@ -22,6 +22,3 @@ def prediction(length: float, weight: float):
 
 def main():
     fire.Fire(prediction)
-
-if __name__=='__main__':
-    main()
