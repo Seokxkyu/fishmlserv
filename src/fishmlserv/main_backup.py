@@ -1,7 +1,5 @@
 from typing import Union
 from fastapi import FastAPI
-import fire 
-import pickle
 
 app = FastAPI()
 
@@ -47,6 +45,3 @@ def fish(length: float, weight: float):
                 "length": length,
                 "weight": weight
             }
-
-if __name__ == '__main__':
-  fire.Fire(fish)
