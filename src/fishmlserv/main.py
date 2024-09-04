@@ -5,6 +5,13 @@ import pickle
 
 app = FastAPI()
 
+from fishmlserv.model.manager import get_model_path
+
+model = get_model_path()
+### 모델 불러오기
+
+with open(model, "rb") as f:
+    fish_model = pickle.load(f)
 
 @app.get("/")
 def read_root():
@@ -26,15 +33,6 @@ def fish(length: float, weight: float):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-    
-    from fishmlserv.model.manager import get_model_path
-
-    model = get_model_path()
-    ### 모델 불러오기
-
-    with open(model, "rb") as f:
-        fish_model = pickle.load(f)
-
     prediction = fish_model.predict([[length, weight]])
 
     fish_class = "빙어"
