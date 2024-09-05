@@ -1,3 +1,10 @@
+import os
+import pickle
+import numpy as np
+
+# 모델을 전역 변수로 캐시
+fish_model = None
+kval = 50
 
 def get_model_path():
     import os
