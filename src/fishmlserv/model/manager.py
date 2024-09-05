@@ -12,6 +12,17 @@ def get_model_path():
     # 사용 fastapi main.py에서 아래와 같이 사용
     # from fishmlserv.model.manager import get_model_path
 
+def load_model(k=5):
+    global fish_model
+    global k_val
+    if (fish_model is None) | (kval != k):
+        model_path = get_model_path(k)
+        with open(model_path, "rb") as f:
+            fish_model = pickle.load(f)
+
+    k_val = k
+    return fish_model
+
 def run_prediction(l: float, w: float, k=5, mean=[27.055102040816323, 444.50000000000017], std=[10.137746423175521, 324.77757223763376]):
     """
     주어진 물고기의 길이(l)와 무게(w)를 기반으로 해당 물고기의 종류를 예측하는 함수.
