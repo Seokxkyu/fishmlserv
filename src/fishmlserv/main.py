@@ -5,7 +5,7 @@ import pickle
 
 app = FastAPI()
 
-from fishmlserv.model.manager import get_model_path
+from fishmlserv.model.manager import get_model_path, run_prediction
 
 model = get_model_path()
 ### 모델 불러오기
