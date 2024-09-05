@@ -3,7 +3,7 @@ from fishmlserv.model.manager import run_prediction
 from tqdm import tqdm
 from fishmlserv.curl import get
 
-def add_prediction_column(csv_file_path='/home/kyuseok00/code/fishmlserv/note/fish_test_data.csv'):
+def add_prediction_column(csv_file_path='/home/kyuseok00/code/fishmlserv/note/fish_test_data_100k.csv'):
     """
     CSV 파일의 데이터를 읽어와 각 행에 대한 예측 결과를 새로운 컬럼에 추가합니다.
 
@@ -23,7 +23,7 @@ def add_prediction_column(csv_file_path='/home/kyuseok00/code/fishmlserv/note/fi
 
     return df
 
-def add_prediction_column_api(csv_file_path='/home/kyuseok00/code/fishmlserv/note/fish_test_data.csv'):
+def add_prediction_column_api(csv_file_path='/home/kyuseok00/code/fishmlserv/note/fish_test_data_100k.csv'):
     """
     CSV 파일의 데이터를 읽어와 각 행에 대한 예측 결과를 새로운 컬럼에 추가합니다.
 
