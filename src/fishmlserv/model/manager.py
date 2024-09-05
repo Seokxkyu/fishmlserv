@@ -10,7 +10,7 @@ def get_model_path(k=5):
     this_path = os.path.abspath(__file__)
     dir_name = os.path.dirname(this_path)
     # model_name = f'{dir_name}/model.pkl'
-    model_name = dir_name + "/model.pkl"
+    model_name = os.path.join(dir_name, f"fish_model_k{k}.pkl")
 
     return model_name
 
